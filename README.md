@@ -1,1 +1,1 @@
-# Shop-on-JavaEE-
+# E-Shop site (on JavaEE)
