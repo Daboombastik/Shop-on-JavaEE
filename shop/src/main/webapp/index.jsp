@@ -11,5 +11,7 @@
 <a href="client">Go to Client page</a>
 <br/>
 <a href="order">Go to Order page</a>
+<br/>
+<a href="formClientCountry">Go to Countries page</a>
 </body>
 </html>
