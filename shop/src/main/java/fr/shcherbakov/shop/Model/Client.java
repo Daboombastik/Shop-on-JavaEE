@@ -1,5 +1,8 @@
 package fr.shcherbakov.shop.Model;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.Enumeration;
+
 public class Client {
 
     String name;
@@ -9,6 +12,30 @@ public class Client {
     String email;
 
     public Client() {
+    }
+
+    public void mapClient (HttpServletRequest request) {
+        Enumeration<String> params = request.getParameterNames();
+        while (params.hasMoreElements()) {
+            String temp = params.nextElement();
+            switch (temp) {
+                case "clientName":
+                    setName(request.getParameter(temp));
+                    break;
+                case "clientSurname":
+                    setSurname(request.getParameter(temp));
+                    break;
+                case "clientAddress":
+                    setAddress(request.getParameter(temp));
+                    break;
+                case "clientPhoneNumber":
+                    setPhone(request.getParameter(temp));
+                    break;
+                case "clientEmail":
+                    setEmail(request.getParameter(temp));
+                    break;
+            }
+        }
     }
 
     public String getName() {
