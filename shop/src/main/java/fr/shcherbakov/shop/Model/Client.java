@@ -19,10 +19,10 @@ public class Client {
         while (params.hasMoreElements()) {
             String temp = params.nextElement();
             switch (temp) {
-                case "clientName":
+                case "clientFName":
                     setName(request.getParameter(temp));
                     break;
-                case "clientSurname":
+                case "clientLName":
                     setSurname(request.getParameter(temp));
                     break;
                 case "clientAddress":

@@ -14,10 +14,14 @@
 </head>
 <body>
 
-<%@ include file="formClientSimple.jsp" %>
+<%--<%@ include file="formClientSimple.jsp" %>--%>
+<c:import url="formClientSimple.jsp" />
 <ul>
     <li>
         <c:out value="${requestScope.client.name}"/>
+    </li>
+    <li>
+        <c:out value="${requestScope.client.surname}"/>
     </li>
     <li>
         <c:out value="${requestScope.client.address}"/>
