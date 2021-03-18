@@ -1,17 +1,16 @@
 package com.ishop.listener;
 
+import com.ishop.service.impl.ServiceManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.ishop.service.impl.ServiceManager;
-
 @WebListener
-public class IShopApplicationListener implements ServletContextListener {
-	private static final Logger LOGGER = LoggerFactory.getLogger(IShopApplicationListener.class);
+public class ApplicationListener implements ServletContextListener {
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationListener.class);
 	private ServiceManager serviceManager;
 
 	@Override

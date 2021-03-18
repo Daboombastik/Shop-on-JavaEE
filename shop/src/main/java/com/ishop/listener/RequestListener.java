@@ -1,19 +1,18 @@
 package com.ishop.listener;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import com.ishop.Constants;
 
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpServletRequest;
-
-import com.ishop.Constants;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @WebListener
 @SuppressWarnings("unchecked")
-public class AccountRequestStatisticsListener implements ServletRequestListener {
+public class RequestListener implements ServletRequestListener {
 
 	@Override
 	public void requestDestroyed(ServletRequestEvent sre) {

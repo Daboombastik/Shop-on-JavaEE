@@ -58,12 +58,7 @@ public class TrimResponseFilter extends AbstractFilter {
 			trimProxyWriter.complete();
 		}
 	}
-	
-	/**
-	 * 
-	 * @author devstudy
-	 * @see http://devstudy.net
-	 */
+
 	private static class TrimProxyWriter extends Writer {
 		private final Writer wr;
 		private int length;

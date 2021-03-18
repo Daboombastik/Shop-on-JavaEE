@@ -1,16 +1,15 @@
 package com.ishop.listener;
 
-import java.util.List;
+import com.ishop.Constants;
 
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
-
-import com.ishop.Constants;
+import java.util.List;
 
 @WebListener
 @SuppressWarnings("unchecked")
-public class AccountSessionStatisticsListener implements HttpSessionListener {
+public class SessionListener implements HttpSessionListener {
 
 	@Override
 	public void sessionCreated(HttpSessionEvent se) {

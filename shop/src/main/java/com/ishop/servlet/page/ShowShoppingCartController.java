@@ -1,7 +1,5 @@
 package com.ishop.servlet.page;
 
-import com.ishop.Constants;
-import com.ishop.entity.Product;
 import com.ishop.servlet.AbstractController;
 import com.ishop.util.RoutingUtils;
 
@@ -10,16 +8,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet("/products")
-public class AllProductsController extends AbstractController {
-	private static final long serialVersionUID = -4385792519039493271L;
+@WebServlet("/shopping-cart")
+public class ShowShoppingCartController extends AbstractController {
+	private static final long serialVersionUID = -1916373553298888514L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Product> products = getProductService().listAllProducts(2, Constants.MAX_PRODUCTS_PER_HTML_PAGE);
-		req.setAttribute("products", products);
-		RoutingUtils.forwardToPage("products.jsp", req, resp);
+		RoutingUtils.forwardToPage("shopping-cart.jsp", req, resp);
 	}
 }
